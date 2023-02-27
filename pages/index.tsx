@@ -1,4 +1,11 @@
-/** Add your relevant code here for the issue to reproduce */
+import { ProblemPage } from "../components/ProblemPage";
+
 export default function Home() {
-  return null
+  return (
+    <ProblemPage
+      nextRoute={() => `/`}
+      // we're using `a` instead of `Link` because otherwise the problem isn't triggered
+      link={<a href="/xxx">To not working example</a>}
+    />
+  );
 }
